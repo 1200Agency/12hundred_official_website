@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12HUNDRED | Full-Service Digital Growth Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandDark: "#1A2229",
+              brandBlue: "#1D63ED",
+              brandLight: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .nav-blur {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-brandLight text-brandDark font-sans selection:bg-brandBlue selection:text-white"
+  >
+    <nav class="fixed w-full z-50 top-0 nav-blur border-b border-black/5">
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <svg
+            width="40"
+            height="20"
+            viewBox="0 0 100 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25 10C10 10 10 40 25 40C32 40 38 30 50 25C62 20 68 10 75 10C90 10 90 40 75 40"
+              stroke="#1A2229"
+              stroke-width="8"
+            />
+            <path
+              d="M50 25C62 20 68 10 75 10"
+              stroke="#1D63ED"
+              stroke-width="8"
+            />
+          </svg>
+          <span class="font-bold text-xl tracking-tighter uppercase"
+            >12HUNDRED</span
+          >
+        </div>
+        <div
+          class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest"
+        >
+          <a href="#about" class="hover:text-brandBlue transition-colors"
+            >About</a
+          >
+          <a href="#services" class="hover:text-brandBlue transition-colors"
+            >Services</a
+          >
+          <a href="#process" class="hover:text-brandBlue transition-colors"
+            >Process</a
+          >
+        </div>
+        <a
+          href="mailto:hello@12hundred.com"
+          class="bg-brandDark text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brandBlue transition-all active:scale-95"
+        >
+          Start a Project
+        </a>
+      </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 pt-20">
+      <div class="max-w-7xl mx-auto w-full">
+        <h1
+          class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8 reveal"
+        >
+          ENGINEERING THE <br /><span
+            class="text-brandBlue underline decoration-2 underline-offset-8"
+            >DIGITAL FUTURE</span
+          >
+        </h1>
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-8 reveal"
+        >
+          <p class="max-w-md text-xl text-gray-600 leading-relaxed">
+            12HUNDRED is a premium web agency dedicated to scaling industry
+            leaders through precision design and high-performance digital
+            solutions.
+          </p>
+          <div class="flex gap-4">
+            <div
+              class="h-12 w-12 rounded-full border border-brandDark flex items-center justify-center animate-bounce"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-32 bg-brandDark text-brandLight px-6">
+      <div class="max-w-7xl mx-auto">
+        <span
+          class="text-brandBlue font-bold tracking-widest uppercase text-sm mb-4 block"
+          >About the Agency</span
+        >
+        <h2
+          class="text-4xl md:text-6xl font-bold mb-12 tracking-tight max-w-4xl reveal"
+        >
+          We act as an extension of your leadership team, turning complex goals
+          into seamless digital experiences.
+        </h2>
+        <div class="grid md:grid-cols-2 gap-16 reveal">
+          <p class="text-lg text-gray-400 leading-relaxed">
+            Growth isn't just about code—it's about strategy. At 12HUNDRED, we
+            bridge the gap between business objectives and user needs, ensuring
+            every pixel serves a purpose for your bottom line.
+          </p>
+          <p class="text-lg text-gray-400 leading-relaxed">
+            Our name represents our commitment to the "Top 1200" standard—where
+            meticulous attention to detail meets infinite scalability. We don't
+            just build websites; we engineer ecosystems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl font-bold mb-20 tracking-tighter">
+          CORE CAPABILITIES
+        </h2>
+        <div
+          class="grid md:grid-cols-3 gap-px bg-gray-200 border border-gray-200"
+        >
+          <div
+            class="bg-white p-12 hover:bg-brandLight transition-colors group reveal"
+          >
+            <span class="text-gray-300 font-mono mb-8 block text-lg">01</span>
+            <h3 class="text-2xl font-bold mb-4">Strategic Consulting</h3>
+            <p class="text-gray-600 mb-8">
+              Defining the roadmap for digital success through data-backed
+              market analysis and technical audits.
+            </p>
+            <div
+              class="h-1 w-0 bg-brandBlue group-hover:w-full transition-all duration-500"
+            ></div>
+          </div>
+          <div
+            class="bg-white p-12 hover:bg-brandLight transition-colors group reveal"
+          >
+            <span class="text-gray-300 font-mono mb-8 block text-lg">02</span>
+            <h3 class="text-2xl font-bold mb-4">Website Design</h3>
+            <p class="text-gray-600 mb-8">
+              Creating high-end visual identities and user-centric interfaces
+              that command authority in your niche.
+            </p>
+            <div
+              class="h-1 w-0 bg-brandBlue group-hover:w-full transition-all duration-500"
+            ></div>
+          </div>
+          <div
+            class="bg-white p-12 hover:bg-brandLight transition-colors group reveal"
+          >
+            <span class="text-gray-300 font-mono mb-8 block text-lg">03</span>
+            <h3 class="text-2xl font-bold mb-4">Web Solutions</h3>
+            <p class="text-gray-600 mb-8">
+              Building robust, scalable architectures using modern stacks for
+              performance and security.
+            </p>
+            <div
+              class="h-1 w-0 bg-brandBlue group-hover:w-full transition-all duration-500"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto text-center mb-20">
+        <h2 class="text-5xl font-bold tracking-tighter reveal">HOW WE WORK</h2>
+      </div>
+      <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+        <div class="reveal">
+          <div class="text-4xl font-bold text-brandBlue mb-4">Discovery</div>
+          <p class="text-gray-600">
+            Deep immersion into your business goals and user pain points.
+          </p>
+        </div>
+        <div class="reveal">
+          <div class="text-4xl font-bold text-brandBlue mb-4">Design</div>
+          <p class="text-gray-600">
+            Iterative prototyping and visual crafting of the solution.
+          </p>
+        </div>
+        <div class="reveal">
+          <div class="text-4xl font-bold text-brandBlue mb-4">Deployment</div>
+          <p class="text-gray-600">
+            Technical implementation with a focus on speed and scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-32 px-6 bg-brandBlue text-white text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl md:text-7xl font-bold mb-10 reveal">
+          READY TO SCALE?
+        </h2>
+        <a
+          href="mailto:hello@12hundred.com"
+          class="inline-block bg-white text-brandBlue px-12 py-6 rounded-full font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform reveal"
+        >
+          Contact 12HUNDRED
+        </a>
+      </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-black/5">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="text-sm font-bold uppercase tracking-widest">
+          © 2024 12HUNDRED AGENCY
+        </div>
+        <div
+          class="flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-500"
+        >
+          <a href="#" class="hover:text-brandBlue">Privacy</a>
+          <a href="#" class="hover:text-brandBlue">Terms</a>
+          <a href="mailto:hello@12hundred.com" class="hover:text-brandBlue"
+            >Email Us</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Reveal on scroll logic
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Smooth nav hide/show logic could go here
+    </script>
+  </body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12HUNDRED | Strategic Digital Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandDark: "#1A2229",
+              brandBlue: "#1D63ED",
+              brandLight: "#F8FAFC",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glass {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.8);
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-scroll {
+        animation: scroll 35s linear infinite;
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] summary svg {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-brandLight text-brandDark font-sans selection:bg-brandBlue selection:text-white overflow-x-hidden"
+  >
+    <nav class="fixed w-full z-50 top-0 glass border-b border-black/5">
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-xl tracking-tighter uppercase"
+            ><img width="60px" src="./logo.jpg" alt="" srcset=""
+          /></span>
+        </div>
+        <div
+          class="hidden md:flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em]"
+        >
+          <a href="#about" class="hover:text-brandBlue transition-colors"
+            >Our Story</a
+          >
+          <a href="#services" class="hover:text-brandBlue transition-colors"
+            >Expertise</a
+          >
+          <a href="#tools" class="hover:text-brandBlue transition-colors"
+            >Stack</a
+          >
+          <a href="#leadership" class="hover:text-brandBlue transition-colors"
+            >Team</a
+          >
+          <a href="#contact" class="hover:text-brandBlue transition-colors"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="#contact"
+          class="bg-brandDark text-white px-6 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-brandBlue transition-all"
+          >Start Project</a
+        >
+      </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center hero-gradient pt-20">
+      <div
+        class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center"
+      >
+        <div class="reveal">
+          <div
+            class="inline-block px-3 py-1 border border-brandBlue text-brandBlue text-[10px] font-bold uppercase tracking-widest mb-6 rounded-full"
+          >
+            Digital Excellence 2026
+          </div>
+          <h1
+            class="text-[clamp(3.5rem,8vw,6.5rem)] font-bold tracking-tighter leading-[0.9] mb-8 uppercase"
+          >
+            WE BUILD FOR<br /><span class="text-brandBlue italic lowercase"
+              >the infinite.</span
+            >
+          </h1>
+          <p class="max-w-lg text-lg text-gray-600 leading-relaxed mb-10">
+            Strategic digital engineering for leaders who refuse to settle for
+            the status quo. We transform complex visions into high-performance
+            market realities.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block bg-brandDark text-white px-10 py-5 rounded-sm font-bold uppercase text-[11px] tracking-widest hover:bg-brandBlue transition-all"
+            >Consult Our Experts</a
+          >
+        </div>
+        <div class="relative reveal h-[550px] hidden lg:block">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000"
+            alt="Architecture"
+            class="w-full h-full shadow-2xl object-cover rounded-2xl"
+          />
+          <div
+            class="absolute -bottom-6 -left-6 bg-white p-8 rounded-xl shadow-xl border border-black/5 max-w-[250px]"
+          >
+            <div class="text-brandBlue font-bold text-4xl mb-2">99.9%</div>
+            <div
+              class="text-[10px] uppercase tracking-widest font-bold text-gray-400"
+            >
+              System Uptime Engineering for high-load digital ecosystems.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-32 bg-white px-6">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-start">
+        <div class="reveal">
+          <h2
+            class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-8"
+          >
+            The Narrative
+          </h2>
+          <div
+            class="space-y-8 text-xl text-gray-700 leading-relaxed font-light"
+          >
+            <p>
+              <strong class="text-brandDark font-semibold">12HUNDRED</strong>
+              was founded to be a corrective force in an industry that often
+              prioritizes aesthetics over architecture.
+            </p>
+            <p>
+              We bridge the gap between the
+              <span class="italic text-brandBlue">C-suite's vision</span> and
+              the
+              <span class="italic text-brandBlue">user's reality</span> through
+              strategic alignment.
+            </p>
+          </div>
+        </div>
+        <div class="bg-brandLight p-12 rounded-lg reveal">
+          <h3 class="text-3xl font-bold mb-6 tracking-tight">Our Philosophy</h3>
+          <ul class="space-y-6 text-sm">
+            <li class="flex gap-4">
+              <span class="text-brandBlue font-bold">01.</span>
+              <p>
+                <strong>Zero Waste:</strong> Every line of code must serve a
+                specific business KPI.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-brandBlue font-bold">02.</span>
+              <p>
+                <strong>Deep Integration:</strong> We work within your team to
+                ensure long-term technical success.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-brandBlue font-bold">03.</span>
+              <p>
+                <strong>The 1200 Standard:</strong> Top 1% craftsmanship and
+                engineering rigor.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="py-20 bg-brandDark text-white overflow-hidden">
+      <div class="flex whitespace-nowrap animate-scroll">
+        <div
+          class="flex gap-16 items-center text-4xl font-bold text-gray-700 uppercase tracking-tighter px-8"
+        >
+          <span>WordPress</span> <span class="text-brandBlue">/</span>
+          <span>JavaScript</span> <span class="text-brandBlue">/</span>
+          <span>Python</span> <span class="text-brandBlue">/</span>
+          <span>React.js</span> <span class="text-brandBlue">/</span>
+          <span>PHP</span> <span class="text-brandBlue">/</span>
+          <span>Java</span> <span class="text-brandBlue">/</span>
+          <span>HTML/CSS</span>
+        </div>
+        <div
+          class="flex gap-16 items-center text-4xl font-bold text-gray-700 uppercase tracking-tighter px-8"
+        >
+          <span>WordPress</span> <span class="text-brandBlue">/</span>
+          <span>JavaScript</span> <span class="text-brandBlue">/</span>
+          <span>Python</span> <span class="text-brandBlue">/</span>
+          <span>React.js</span> <span class="text-brandBlue">/</span>
+          <span>PHP</span> <span class="text-brandBlue">/</span>
+          <span>Java</span> <span class="text-brandBlue">/</span>
+          <span>HTML/CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-20"
+        >
+          Expertise
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="bg-white p-12 border border-black/5 rounded-lg reveal">
+            <h3 class="text-2xl font-bold mb-4">Strategic Consulting</h3>
+            <p class="text-gray-500">
+              Defining the roadmap for digital success through data-backed
+              market analysis and technical audits.
+            </p>
+          </div>
+          <div class="bg-white p-12 border border-black/5 rounded-lg reveal">
+            <h3 class="text-2xl font-bold mb-4">Website Design & UX</h3>
+            <p class="text-gray-500">
+              Crafting intuitive user experiences and award-winning visual
+              identities that convert visitors into advocates.
+            </p>
+          </div>
+          <div class="bg-white p-12 border border-black/5 rounded-lg reveal">
+            <h3 class="text-2xl font-bold mb-4">Custom Web Solutions</h3>
+            <p class="text-gray-500">
+              Building robust, scalable web applications and platforms tailored
+              to complex enterprise business needs.
+            </p>
+          </div>
+          <div class="bg-white p-12 border border-black/5 rounded-lg reveal">
+            <h3 class="text-2xl font-bold mb-4">Ongoing Support</h3>
+            <p class="text-gray-500">
+              Continuous optimization, maintenance, and strategic scaling to
+              ensure long-term digital performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="py-32 bg-white px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-16"
+        >
+          Leadership
+        </h2>
+        <div class="grid md:grid-cols-3 gap-12">
+          <div class="group reveal">
+            <div
+              class="aspect-[3/4] mb-6 overflow-hidden rounded-lg bg-gray-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                alt="Marcus"
+              />
+            </div>
+            <h4 class="font-bold text-xl uppercase tracking-tighter">
+              Marcus Thorne
+            </h4>
+            <p
+              class="text-brandBlue text-[10px] font-bold uppercase tracking-widest"
+            >
+              Founding Partner
+            </p>
+          </div>
+          <div class="group reveal" style="transition-delay: 100ms">
+            <div
+              class="aspect-[3/4] mb-6 overflow-hidden rounded-lg bg-gray-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                alt="Elena"
+              />
+            </div>
+            <h4 class="font-bold text-xl uppercase tracking-tighter">
+              Elena Rossi
+            </h4>
+            <p
+              class="text-brandBlue text-[10px] font-bold uppercase tracking-widest"
+            >
+              Chief Technology Officer
+            </p>
+          </div>
+          <div class="group reveal" style="transition-delay: 200ms">
+            <div
+              class="aspect-[3/4] mb-6 overflow-hidden rounded-lg bg-gray-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                alt="Julian"
+              />
+            </div>
+            <h4 class="font-bold text-xl uppercase tracking-tighter">
+              Julian Vance
+            </h4>
+            <p
+              class="text-brandBlue text-[10px] font-bold uppercase tracking-widest"
+            >
+              Head of UX
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-32 bg-brandDark text-white px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2
+          class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-12 text-center"
+        >
+          Strategic Intelligence FAQ
+        </h2>
+        <div class="space-y-4">
+          <details class="group border-b border-white/10 pb-6 reveal">
+            <summary
+              class="flex justify-between items-center cursor-pointer font-bold text-xl tracking-tight"
+            >
+              How long does a typical digital transformation take?
+              <svg
+                class="w-5 h-5 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-400">
+              Most core engineering projects span 8 to 16 weeks. We prioritize
+              structural integrity over superficial speed.
+            </p>
+          </details>
+          <details class="group border-b border-white/10 pb-6 reveal">
+            <summary
+              class="flex justify-between items-center cursor-pointer font-bold text-xl tracking-tight"
+            >
+              Do you support legacy system integration?
+              <svg
+                class="w-5 h-5 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-400">
+              Yes. We specialize in decoupling legacy codebases to modernize
+              frontend experiences without data loss.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+        <div class="reveal">
+          <h2 class="text-6xl font-bold tracking-tighter mb-8">
+            INITIATE<br />ENGINEERING
+          </h2>
+          <div
+            class="grid grid-cols-2 gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-12"
+          >
+            <div>NY / 212 555 0123</div>
+            <div>LDN / 20 7946 0958</div>
+            <div>SG / 6733 1234</div>
+          </div>
+          <a
+            href="mailto:hello@12hundred.com"
+            class="text-2xl font-medium text-brandBlue underline underline-offset-8"
+            >hello@12hundred.com</a
+          >
+        </div>
+        <div
+          class="bg-white border border-black/5 p-10 rounded-2xl shadow-2xl reveal"
+        >
+          <form id="contactForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="bg-gray-50 p-4 rounded-lg w-full outline-none focus:ring-2 focus:ring-brandBlue/10"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Company"
+                class="bg-gray-50 p-4 rounded-lg w-full outline-none focus:ring-2 focus:ring-brandBlue/10"
+              />
+            </div>
+            <input
+              type="email"
+              placeholder="Work Email"
+              class="bg-gray-50 p-4 rounded-lg w-full outline-none focus:ring-2 focus:ring-brandBlue/10"
+              required
+            />
+            <textarea
+              rows="4"
+              placeholder="Project Brief"
+              class="bg-gray-50 p-4 rounded-lg w-full outline-none focus:ring-2 focus:ring-brandBlue/10"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full bg-brandBlue text-white font-bold uppercase tracking-widest py-5 rounded-lg hover:brightness-110 active:scale-95 transition-all"
+            >
+              Submit Brief
+            </button>
+            <div
+              id="formStatus"
+              class="text-center text-sm font-bold hidden"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-12 px-6 bg-white border-t border-black/5 text-center text-[10px] font-bold uppercase tracking-widest text-gray-400"
+    >
+      © 2026 12HUNDRED STRATEGIC DIGITAL ENGINEERING.
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const status = document.getElementById("formStatus");
+          status.textContent = "TRANSMITTING BRIEF...";
+          status.className =
+            "text-center text-sm font-bold block text-brandBlue";
+          setTimeout(() => {
+            status.textContent = "RECEIVED. WE WILL REACH OUT WITHIN 12H.";
+            status.className =
+              "text-center text-sm font-bold block text-green-600";
+            this.reset();
+          }, 2000);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12HUNDRED | Strategic Digital Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandDark: "#1A2229",
+              brandBlue: "#1D63ED",
+              brandLight: "#F8FAFC",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glass {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.8);
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #1d63ed;
+      }
+      .hero-background {
+        background-image: url("https://image.pollinations.ai/prompt/abstract%20digital%20matrix%20blueprint%20lines%20minimalist%20blue%20and%20dark%20grey%20subtle%20tech%20background%20high%20resolution?width=1920&height=1080&seed=42");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+        background-color: rgba(248, 250, 252, 0.7); /* Blend with brandLight */
+      }
+    </style>
+  </head>
+  <body
+    class="bg-brandLight text-brandDark font-sans selection:bg-brandBlue selection:text-white"
+  >
+    <nav class="fixed w-full z-50 top-0 glass border-b border-black/5">
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <svg width="35" height="18" viewBox="0 0 100 50" fill="none">
+            <path
+              d="M25 10C10 10 10 40 25 40C32 40 38 30 50 25C62 20 68 10 75 10C90 10 90 40 75 40"
+              stroke="#1A2229"
+              stroke-width="8"
+            />
+            <path
+              d="M50 25C62 20 68 10 75 10"
+              stroke="#1D63ED"
+              stroke-width="8"
+            />
+          </svg>
+          <span class="font-bold text-xl tracking-tighter uppercase"
+            >12HUNDRED</span
+          >
+        </div>
+        <div
+          class="hidden md:flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em]"
+        >
+          <a href="#about" class="hover:text-brandBlue transition-colors"
+            >Our Story</a
+          >
+          <a href="#services" class="hover:text-brandBlue transition-colors"
+            >Expertise</a
+          >
+          <a href="#clients" class="hover:text-brandBlue transition-colors"
+            >Clients</a
+          >
+          <a href="#contact" class="hover:text-brandBlue transition-colors"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="#contact"
+          class="bg-brandDark text-white px-6 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-brandBlue transition-all"
+          >Get in Touch</a
+        >
+      </div>
+    </nav>
+
+    <section
+      class="min-h-screen flex items-center px-6 hero-background relative"
+    >
+      <div class="absolute inset-0 bg-brandLight/70"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10 pt-20 pb-12">
+        <h1
+          class="text-[clamp(3rem,10vw,8rem)] font-bold tracking-tighter leading-[0.85] mb-12 reveal"
+        >
+          WE BUILD FOR<br /><span class="text-brandBlue italic"
+            >THE INFINITE.</span
+          >
+        </h1>
+        <p class="max-w-xl text-xl text-gray-700 leading-relaxed reveal">
+          Strategic digital engineering for leaders who refuse to settle for the
+          status quo. We transform complex visions into high-performance market
+          realities.
+        </p>
+        <div class="mt-12 reveal">
+          <a
+            href="#contact"
+            class="inline-block bg-brandBlue text-white px-8 py-4 rounded-sm font-bold uppercase text-sm tracking-widest hover:brightness-110 transition-all transform active:scale-[0.98]"
+          >
+            Start Your Project
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-32 bg-white border-y border-black/5 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-24 items-start">
+          <div>
+            <h2
+              class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-8 reveal"
+            >
+              The Narrative
+            </h2>
+            <div
+              class="space-y-8 text-xl text-gray-700 leading-relaxed font-light reveal"
+            >
+              <p>
+                <strong class="text-brandDark font-semibold">12HUNDRED</strong>
+                wasn't founded to be another agency. We were founded to be a
+                corrective force in an industry that often prioritizes
+                aesthetics over architecture.
+              </p>
+              <p>
+                Our journey began with a simple observation: most digital
+                products fail not because of poor design, but because of a lack
+                of strategic alignment. We bridge the gap between the
+                <span class="italic text-brandBlue">C-suite's vision</span> and
+                the <span class="italic text-brandBlue">user's reality</span>.
+              </p>
+              <p>
+                Today, we serve as an elite extension of leadership teams. We
+                don't just "take briefs." We challenge assumptions, optimize
+                workflows, and engineer systems that are built to scale
+                infinitely.
+              </p>
+            </div>
+          </div>
+          <div class="bg-brandLight p-12 rounded-lg reveal">
+            <h3 class="text-3xl font-bold mb-6 tracking-tight">
+              Our Philosophy
+            </h3>
+            <ul class="space-y-6">
+              <li class="flex gap-4">
+                <span class="text-brandBlue font-bold">01.</span>
+                <p class="text-sm">
+                  <strong>Zero Waste:</strong> Every line of code and every
+                  pixel must serve a specific business KPI.
+                </p>
+              </li>
+              <li class="flex gap-4">
+                <span class="text-brandBlue font-bold">02.</span>
+                <p class="text-sm">
+                  <strong>Deep Integration:</strong> We don't work "for" you; we
+                  work "within" your team to ensure long-term cultural and
+                  technical success.
+                </p>
+              </li>
+              <li class="flex gap-4">
+                <span class="text-brandBlue font-bold">03.</span>
+                <p class="text-sm">
+                  <strong>The 1200 Standard:</strong> A commitment to the top 1%
+                  of digital craftsmanship and engineering rigor.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-8 reveal"
+        >
+          Our Expertise
+        </h2>
+        <p
+          class="text-[clamp(2rem,6vw,4rem)] font-bold tracking-tighter leading-tight mb-20 reveal max-w-4xl"
+        >
+          Integrated solutions designed for your digital ecosystem.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div
+            class="bg-white p-10 border border-black/5 rounded-lg shadow-sm hover:shadow-md transition-all group reveal"
+          >
+            <h3 class="text-2xl font-bold mb-4">Strategic Consulting</h3>
+            <p class="text-gray-600 mb-6">
+              Defining the roadmap for digital success through data-backed
+              market analysis and technical audits.
+            </p>
+            <a
+              href="#contact"
+              class="text-brandBlue font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
+            >
+              Learn More
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="bg-white p-10 border border-black/5 rounded-lg shadow-sm hover:shadow-md transition-all group reveal"
+          >
+            <h3 class="text-2xl font-bold mb-4">Website Design & UX</h3>
+            <p class="text-gray-600 mb-6">
+              Crafting intuitive user experiences and award-winning visual
+              identities that convert.
+            </p>
+            <a
+              href="#contact"
+              class="text-brandBlue font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
+            >
+              Learn More
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="bg-white p-10 border border-black/5 rounded-lg shadow-sm hover:shadow-md transition-all group reveal"
+          >
+            <h3 class="text-2xl font-bold mb-4">Custom Web Solutions</h3>
+            <p class="text-gray-600 mb-6">
+              Building robust, scalable web applications and platforms tailored
+              to complex business needs.
+            </p>
+            <a
+              href="#contact"
+              class="text-brandBlue font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
+            >
+              Learn More
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="bg-white p-10 border border-black/5 rounded-lg shadow-sm hover:shadow-md transition-all group reveal"
+          >
+            <h3 class="text-2xl font-bold mb-4">Ongoing Growth & Support</h3>
+            <p class="text-gray-600 mb-6">
+              Continuous optimization, maintenance, and strategic scaling to
+              ensure long-term digital performance.
+            </p>
+            <a
+              href="#contact"
+              class="text-brandBlue font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
+            >
+              Learn More
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="py-24 bg-brandLight px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-xs font-bold uppercase tracking-[0.3em] text-brandBlue mb-12 text-center reveal"
+        >
+          Trusted by Industry Leaders
+        </h2>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-center justify-center reveal"
+        >
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+A"
+              alt="Client Logo A"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+B"
+              alt="Client Logo B"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+C"
+              alt="Client Logo C"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+D"
+              alt="Client Logo D"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+E"
+              alt="Client Logo E"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+F"
+              alt="Client Logo F"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+G"
+              alt="Client Logo G"
+              class="h-10 object-contain"
+            />
+          </div>
+          <div
+            class="flex justify-center opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://via.placeholder.com/120x40/E2E8F0/64748B?text=Client+H"
+              alt="Client Logo H"
+              class="h-10 object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 bg-brandDark text-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 reveal">GLOBAL PRESENCE</h2>
+        <div class="grid md:grid-cols-3 gap-12 reveal">
+          <div class="border-l border-brandBlue/30 pl-6">
+            <h4
+              class="text-brandBlue font-bold uppercase tracking-widest text-xs mb-4"
+            >
+              North America
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              1200 Innovation Way<br />Suite 400, New York, NY<br />+1 (212)
+              555-0123
+            </p>
+          </div>
+          <div class="border-l border-brandBlue/30 pl-6">
+            <h4
+              class="text-brandBlue font-bold uppercase tracking-widest text-xs mb-4"
+            >
+              Europe
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Savile Row, Mayfair<br />London, W1S 3PR<br />+44 20 7946 0958
+            </p>
+          </div>
+          <div class="border-l border-brandBlue/30 pl-6">
+            <h4
+              class="text-brandBlue font-bold uppercase tracking-widest text-xs mb-4"
+            >
+              Asia Pacific
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Level 28, Marina Bay Sands<br />Singapore 018956<br />+65 6733
+              1234
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20">
+          <div class="reveal">
+            <h2 class="text-6xl font-bold tracking-tighter mb-8">
+              LET'S START THE<br />CONVERSATION
+            </h2>
+            <p class="text-xl text-gray-500 mb-12">
+              Whether you're ready to launch or just exploring the future, our
+              consultants are ready to talk strategy.
+            </p>
+            <div class="space-y-4">
+              <a
+                href="mailto:hello@12hundred.com"
+                class="block text-2xl font-medium hover:text-brandBlue transition-colors underline decoration-brandBlue"
+                >hello@12hundred.com</a
+              >
+              <p class="text-gray-500 text-sm">
+                For general inquiries, email us directly.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-black/5 p-10 rounded-2xl shadow-xl reveal"
+          >
+            <form id="contactForm" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="name"
+                    class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    class="bg-gray-50 p-4 rounded-lg border border-transparent transition-all focus:bg-white focus:ring-2 focus:ring-brandBlue/10"
+                  />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="company"
+                    class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+                    >Company</label
+                  >
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Enter Company"
+                    class="bg-gray-50 p-4 rounded-lg border border-transparent transition-all focus:bg-white focus:ring-2 focus:ring-brandBlue/10"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  for="email"
+                  class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  class="bg-gray-50 p-4 rounded-lg border border-transparent transition-all focus:bg-white focus:ring-2 focus:ring-brandBlue/10"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  for="message"
+                  class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="How can we help?"
+                  class="bg-gray-50 p-4 rounded-lg border border-transparent transition-all focus:bg-white focus:ring-2 focus:ring-brandBlue/10"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-brandBlue text-white font-bold uppercase tracking-[0.2em] py-5 rounded-lg hover:brightness-110 transition-all transform active:scale-[0.98]"
+              >
+                Submit Inquiry
+              </button>
+            </form>
+            <div
+              id="formStatus"
+              class="mt-4 hidden text-sm font-medium text-center"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-black/5 bg-white">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="flex items-center gap-4">
+          <span class="font-bold text-lg tracking-tighter uppercase"
+            >12HUNDRED</span
+          >
+          <span class="text-xs text-gray-400">© 2024 Engineered Growth</span>
+        </div>
+        <div
+          class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-500"
+        >
+          <a href="#" class="hover:text-brandBlue">LinkedIn</a>
+          <a href="#" class="hover:text-brandBlue">Instagram</a>
+          <a href="mailto:hello@12hundred.com" class="hover:text-brandBlue"
+            >Email Us</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll Reveal Logic
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Form Logic (for a "smart" app-like feel)
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const status = document.getElementById("formStatus");
+          status.textContent = "Processing inquiry...";
+          status.classList.remove("hidden", "text-red-500", "text-green-600");
+          status.classList.add("text-brandBlue"); // Use brandBlue for 'processing'
+
+          // Simulate server response time
+          setTimeout(() => {
+            status.textContent =
+              "Message received. We'll be in touch within 12 hours.";
+            status.classList.replace("text-brandBlue", "text-green-600");
+            this.reset(); // Clear the form
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>
