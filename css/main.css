@@ -1,0 +1,22 @@
+/* ============================================
+   Main Stylesheet
+   1200 Agency
+   ============================================ */
+
+/* Import all CSS modules in correct order */
+@import 'reset.css';
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'animations.css';
+
+/* This file serves as the main entry point for all styles.
+   Individual modules are imported above in the correct order:
+   1. Reset - Browser normalization
+   2. Variables - Design tokens
+   3. Base - Typography and base elements
+   4. Layout - Grid and layout utilities
+   5. Components - Reusable components
+   6. Animations - Animation definitions
+*/

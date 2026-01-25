@@ -1,0 +1,224 @@
+/* ============================================
+   Base Styles & Typography
+   1200 Agency
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ========== Base Styles ========== */
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-soft-white);
+    background-color: var(--color-deep-charcoal);
+    overflow-x: hidden;
+}
+
+/* ========== Typography ========== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-accent);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-pure-white);
+    margin-bottom: var(--space-lg);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+p {
+    margin-bottom: var(--space-md);
+    color: var(--color-gray);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Strong emphasis */
+strong,
+b {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-pure-white);
+}
+
+/* Italic emphasis */
+em,
+i {
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: var(--color-electric-blue);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+    color: var(--color-pure-white);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-electric-blue);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+/* Small text */
+small {
+    font-size: var(--font-size-small);
+    color: var(--color-gray-dark);
+}
+
+/* Code */
+code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background-color: var(--color-charcoal-light);
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-sm);
+    color: var(--color-electric-blue);
+}
+
+/* Blockquote */
+blockquote {
+    border-left: 4px solid var(--color-electric-blue);
+    padding-left: var(--space-lg);
+    margin: var(--space-xl) 0;
+    font-style: italic;
+    color: var(--color-gray);
+}
+
+/* ========== Selection ========== */
+
+::selection {
+    background-color: var(--color-electric-blue);
+    color: var(--color-deep-charcoal);
+}
+
+::-moz-selection {
+    background-color: var(--color-electric-blue);
+    color: var(--color-deep-charcoal);
+}
+
+/* ========== Scrollbar ========== */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-electric-blue) var(--color-charcoal);
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-electric-blue);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-pure-white);
+}
+
+/* ========== Focus Styles ========== */
+
+:focus-visible {
+    outline: 2px solid var(--color-electric-blue);
+    outline-offset: 4px;
+}
+
+/* ========== Utility Classes ========== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-gradient {
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-electric {
+    color: var(--color-electric-blue);
+}
+
+.text-white {
+    color: var(--color-pure-white);
+}
+
+.text-gray {
+    color: var(--color-gray);
+}
+
+/* Font weights */
+.font-light {
+    font-weight: var(--font-weight-light);
+}
+
+.font-regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}

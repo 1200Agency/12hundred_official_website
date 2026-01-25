@@ -1,0 +1,203 @@
+/* ============================================
+   Component Styles
+   1200 Agency
+   ============================================ */
+
+/* This file will contain all reusable component styles.
+   Components will be added progressively in later phases:
+   - Buttons
+   - Cards
+   - Navigation
+   - Forms
+   - Sections (Hero, About, Services, etc.)
+*/
+
+/* ========== Buttons ========== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    border: var(--border-width-thick) solid transparent;
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-out);
+    white-space: nowrap;
+    user-select: none;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-electric-blue);
+    outline-offset: 4px;
+}
+
+/* Button variants */
+.btn-primary {
+    background: var(--gradient-blue);
+    color: var(--color-deep-charcoal);
+    border-color: transparent;
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-strong);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-electric-blue);
+    border-color: var(--color-electric-blue);
+}
+
+.btn-outline:hover {
+    background: var(--color-electric-blue);
+    color: var(--color-deep-charcoal);
+    transform: translateY(-2px);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--color-pure-white);
+    border-color: transparent;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Button sizes */
+.btn-sm {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-small);
+}
+
+.btn-lg {
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: var(--font-size-h6);
+}
+
+/* ========== Cards ========== */
+
+.card {
+    background: var(--color-charcoal);
+    border: var(--border-width) solid var(--color-charcoal-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-electric-blue);
+    box-shadow: var(--shadow-glow);
+}
+
+.card-title {
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--space-md);
+    color: var(--color-pure-white);
+}
+
+.card-description {
+    color: var(--color-gray);
+    margin-bottom: var(--space-lg);
+}
+
+/* ========== Section Headings ========== */
+
+.section-heading {
+    font-size: var(--font-size-h2);
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-blue);
+    margin: var(--space-lg) auto 0;
+    border-radius: var(--radius-full);
+}
+
+.section-subheading {
+    font-size: var(--font-size-body);
+    color: var(--color-gray);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--space-3xl);
+}
+
+/* ========== Badges ========== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-full);
+    background: var(--color-charcoal-light);
+    color: var(--color-electric-blue);
+    border: var(--border-width) solid var(--color-electric-blue);
+}
+
+/* ========== Dividers ========== */
+
+.divider {
+    height: var(--border-width);
+    background: var(--color-charcoal-light);
+    border: none;
+    margin: var(--space-2xl) 0;
+}
+
+.divider-gradient {
+    background: var(--gradient-blue);
+    opacity: 0.3;
+}
+
+/* ========== Loading States ========== */
+
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--color-electric-blue);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========== Placeholder for future components ========== */
+
+/* Navigation styles will be added in Phase 2 */
+/* Hero section styles will be added in Phase 3 */
+/* Form styles will be added in Phase 6 */
