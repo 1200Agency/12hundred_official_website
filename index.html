@@ -83,9 +83,64 @@
     <main>
 
         <!-- Hero Section -->
-        <section id="hero" class="section h-screen">
-            <div class="container">
-                <!-- Hero content will be built in Phase 3 -->
+        <section id="hero" class="section hero">
+            <div class="hero-background">
+                <div class="hero-grid"></div>
+                <div class="hero-glow"></div>
+            </div>
+
+            <div class="container hero-container">
+
+                <!-- Animated Logo -->
+                <div class="hero-logo">
+                    <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <!-- "12" in white -->
+                        <text x="10" y="60" class="logo-12" font-family="Outfit, sans-serif" font-size="48"
+                            font-weight="700" fill="#ffffff">12</text>
+
+                        <!-- "00" as infinity symbol in electric blue -->
+                        <g class="logo-infinity-group">
+                            <!-- Infinity symbol path -->
+                            <path
+                                d="M 80 40 Q 90 20, 110 40 Q 130 60, 150 40 Q 170 20, 190 40 Q 170 60, 150 40 Q 130 20, 110 40 Q 90 60, 80 40 Z"
+                                class="infinity-path" fill="none" stroke="#00d4ff" stroke-width="6"
+                                stroke-linecap="round" />
+
+                            <!-- "00" text overlay for accessibility -->
+                            <text x="90" y="60" class="logo-00" font-family="Outfit, sans-serif" font-size="48"
+                                font-weight="700" fill="#00d4ff" opacity="0">00</text>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h1 class="hero-headline">
+                        <span class="headline-line">Where Strategy</span>
+                        <span class="headline-line">Meets <span class="text-gradient">Infinity</span></span>
+                    </h1>
+
+                    <p class="hero-subheadline">
+                        Tech-first agency delivering limitless growth through strategic intelligence.
+                        We build what traditional agencies can't.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-primary btn-lg hero-cta-primary">Get In Touch</a>
+                        <a href="#portfolio" class="btn btn-outline btn-lg hero-cta-secondary">View Our Work</a>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <span class="scroll-text">Scroll to explore</span>
+                    <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
             </div>
         </section>
 

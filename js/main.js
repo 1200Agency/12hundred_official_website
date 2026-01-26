@@ -5,7 +5,7 @@
 
 // Import modules
 import Navigation from './navigation.js';
-// import AnimationController from './animations.js';
+import AnimationController from './animations.js';
 // import ContactForm from './form-validation.js';
 
 /**
@@ -16,6 +16,9 @@ const init = () => {
 
     // Phase 2: Initialize Navigation
     new Navigation();
+
+    // Phase 3: Initialize Animations
+    new AnimationController();
 
     // Future phases:
     // - Phase 3: Animations
