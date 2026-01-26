@@ -3,8 +3,8 @@
 // 1200 Agency
 // ============================================
 
-// Import modules (will be populated in later phases)
-// import Navigation from './navigation.js';
+// Import modules
+import Navigation from './navigation.js';
 // import AnimationController from './animations.js';
 // import ContactForm from './form-validation.js';
 
@@ -14,9 +14,10 @@
 const init = () => {
     console.log('🚀 1200 Agency Website Initialized');
 
-    // Phase 1: Foundation complete
-    // Modules will be initialized in subsequent phases:
-    // - Phase 2: Navigation
+    // Phase 2: Initialize Navigation
+    new Navigation();
+
+    // Future phases:
     // - Phase 3: Animations
     // - Phase 4-5: Section-specific functionality
     // - Phase 6: Contact form
