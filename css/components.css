@@ -238,15 +238,24 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    transition: transform var(--duration-fast) var(--ease-out);
+    transition: transform var(--duration-fast) var(--ease-out), color 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 
 .nav-logo:hover {
     transform: scale(1.05);
+    color: var(--color-electric-blue);
 }
 
 .logo-text {
     display: inline-block;
+    color: var(--color-pure-white);
+}
+
+.logo-infinity {
+    color: var(--color-electric-blue);
+    font-weight: var(--font-weight-bold);
 }
 
 .logo-infinity {
@@ -569,28 +578,29 @@
 .logo-svg {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    filter: drop-shadow(0 0 30px rgba(255, 107, 107, 0.6));
 }
 
-.logo-12 {
+.logo-00-glow {
     opacity: 0;
-    animation: fadeIn 0.6s var(--ease-out) 0.5s forwards;
+    animation: fadeInGlow 1s var(--ease-out) 0.5s forwards, glowPulse 3s ease-in-out 1.5s infinite;
 }
 
-.logo-infinity-group {
-    opacity: 0;
-    animation: fadeIn 0.6s var(--ease-out) 0.8s forwards;
-}
-
-.infinity-path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: drawInfinity 2s var(--ease-out) 0.8s forwards, glowPulse 4s ease-in-out 2.8s infinite;
-}
-
-@keyframes drawInfinity {
+@keyframes fadeInGlow {
     to {
-        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255, 107, 107, 0.8));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 40px rgba(255, 107, 107, 1)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.6));
     }
 }
 
