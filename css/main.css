@@ -10,6 +10,7 @@
 @import 'layout.css';
 @import 'components.css';
 @import 'animations.css';
+@import 'theme-toggle.css';
 
 /* This file serves as the main entry point for all styles.
    Individual modules are imported above in the correct order:

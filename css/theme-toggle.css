@@ -1,0 +1,119 @@
+/* ============================================
+   Theme Toggle Component
+   1200 Agency
+   ============================================ */
+
+.theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-charcoal);
+    border: 2px solid var(--color-electric-blue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-electric-blue-dark);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Icon container */
+.theme-toggle-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+/* Sun icon (visible in dark mode) */
+.sun-icon {
+    color: var(--color-accent-yellow);
+    transition: all 0.3s ease;
+}
+
+/* Moon icon (visible in light mode) */
+.moon-icon {
+    color: var(--color-electric-blue-dark);
+    transition: all 0.3s ease;
+}
+
+/* Hide/show icons based on theme */
+[data-theme="dark"] .sun-icon {
+    display: block;
+}
+
+[data-theme="dark"] .moon-icon {
+    display: none;
+}
+
+[data-theme="light"] .sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .moon-icon {
+    display: block;
+}
+
+/* Tooltip */
+.theme-toggle::before {
+    content: attr(aria-label);
+    position: absolute;
+    right: 70px;
+    background: var(--color-charcoal);
+    color: var(--color-pure-white);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border: 1px solid var(--color-electric-blue);
+}
+
+.theme-toggle:hover::before {
+    opacity: 1;
+}
+
+/* Mobile positioning */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 80px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .theme-toggle::before {
+        display: none;
+    }
+}
+
+/* Smooth transitions for all theme-affected elements */
+*,
+*::before,
+*::after {
+    transition-property: background-color, color, border-color, box-shadow, fill, stroke;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+/* Exclude animations and transforms from theme transitions */
+@media (prefers-reduced-motion: no-preference) {
+    *:not(.animate-on-scroll):not([class*="animation"]) {
+        transition-property: background-color, color, border-color, box-shadow, fill, stroke;
+    }
+}
