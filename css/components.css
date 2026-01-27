@@ -213,6 +213,18 @@
     z-index: var(--z-index-fixed);
 }
 
+/* Light mode nav styling */
+[data-theme="light"] .nav {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(224, 221, 216, 0.5);
+}
+
+[data-theme="light"] .nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: #E0DDD8;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
 .nav.scrolled {
     background: rgba(15, 15, 15, 0.95);
     border-bottom-color: var(--color-charcoal-light);
