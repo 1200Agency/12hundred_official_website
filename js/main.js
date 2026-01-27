@@ -1,40 +1,26 @@
-// ============================================
-// Main JavaScript Entry Point
-// 1200 Agency
-// ============================================
+// ===================================
+// MAIN JAVASCRIPT ENTRY POINT
+// ===================================
 
-// Import modules
 import Navigation from './navigation.js';
 import AnimationController from './animations.js';
-// import ContactForm from './form-validation.js';
+import ContactForm from './form-validation.js';
 
 /**
- * Initialize the application
+ * Initialize all modules when DOM is ready
  */
-const init = () => {
-    console.log('🚀 1200 Agency Website Initialized');
-
-    // Phase 2: Initialize Navigation
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize navigation
     new Navigation();
 
-    // Phase 3: Initialize Animations
+    // Initialize animations
     new AnimationController();
 
-    // Future phases:
-    // - Phase 3: Animations
-    // - Phase 4-5: Section-specific functionality
-    // - Phase 6: Contact form
+    // Initialize contact form
+    new ContactForm();
 
     // Add loaded class to body for CSS transitions
     document.body.classList.add('loaded');
-};
 
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-} else {
-    init();
-}
-
-// Export for potential use in other modules
-export default { init };
+    console.log('🚀 1200 Agency website initialized');
+});

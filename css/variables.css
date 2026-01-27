@@ -7,20 +7,23 @@
     /* ========== Colors ========== */
 
     /* Primary Colors */
-    --color-deep-charcoal: #0f0f0f;
-    --color-charcoal: #1a1a1a;
-    --color-charcoal-light: #2a2a2a;
-    --color-electric-blue: #00d4ff;
-    --color-electric-blue-dark: #0099ff;
+    --color-deep-charcoal: #0A0A0F;
+    --color-charcoal: #1A1A24;
+    --color-charcoal-light: #2A2A34;
+    --color-electric-blue: #FF6B6B;
+    --color-electric-blue-dark: #A855F7;
     --color-pure-white: #ffffff;
-    --color-soft-white: #f5f5f5;
+    --color-soft-white: #F8F9FA;
     --color-gray: #e0e0e0;
-    --color-gray-dark: #999999;
+    --color-gray-dark: #9CA3AF;
+
+    /* New Accent Color */
+    --color-accent-yellow: #FCD34D;
 
     /* Gradients */
-    --gradient-blue: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-    --gradient-dark: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
-    --gradient-hero: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+    --gradient-blue: linear-gradient(135deg, #FF6B6B 0%, #A855F7 100%);
+    --gradient-dark: linear-gradient(180deg, #1A1A24 0%, #0A0A0F 100%);
+    --gradient-hero: linear-gradient(135deg, #0A0A0F 0%, #1A1A24 50%, #0A0A0F 100%);
 
     /* Semantic Colors */
     --color-success: #00ff88;

@@ -167,18 +167,13 @@ class Navigation {
     }
 
     /**
-     * Create and setup scroll-to-top button
+     * Initialize scroll-to-top button reference
      */
     createScrollToTopButton() {
-        const button = document.createElement('button');
-        button.className = 'scroll-to-top';
-        button.setAttribute('aria-label', 'Scroll to top');
-        button.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
-      </svg>
-    `;
-        document.body.appendChild(button);
+        const button = document.querySelector('.scroll-to-top');
+        if (!button) {
+            console.warn('Scroll-to-top button not found in HTML');
+        }
         return button;
     }
 

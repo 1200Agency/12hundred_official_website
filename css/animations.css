@@ -120,6 +120,20 @@
     }
 }
 
+/* ========== Scroll Reveal Animations ========== */
+
+/* These will be applied via JavaScript using Intersection Observer */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--duration-slow) var(--ease-out);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ========== Scroll-Triggered Animation Classes ========== */
 
 /* Elements start hidden and animate in when scrolled into view */
