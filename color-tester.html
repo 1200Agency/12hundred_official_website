@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1200 Agency - Color Palette Tester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Dark Mode Colors */
+            --color-deep-charcoal: #0A0A0F;
+            --color-charcoal: #1A1A24;
+            --color-charcoal-light: #2A2A34;
+            --color-electric-blue: #FF6B6B;
+            --color-electric-blue-dark: #A855F7;
+            --color-pure-white: #ffffff;
+            --color-soft-white: #F8F9FA;
+            --color-gray: #e0e0e0;
+            --color-gray-dark: #9CA3AF;
+            --color-accent-yellow: #FCD34D;
+            --gradient-blue: linear-gradient(135deg, #FF6B6B 0%, #A855F7 100%);
+        }
+
+        [data-theme="light"] {
+            /* Light Mode Colors */
+            --color-deep-charcoal: #FDFBF7;
+            --color-charcoal: #F8F6F3;
+            --color-charcoal-light: #F0EDE8;
+            --color-electric-blue: #FF5252;
+            --color-electric-blue-dark: #9C27B0;
+            --color-accent-yellow: #FFC107;
+            --color-pure-white: #1A1A1A;
+            --color-soft-white: #4A4A4A;
+            --color-gray: #6B6B6B;
+            --color-gray-dark: #8A8A8A;
+            --gradient-blue: linear-gradient(135deg, #FF5252 0%, #9C27B0 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--color-deep-charcoal);
+            color: var(--color-pure-white);
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .theme-toggle-btn {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            padding: 1rem 2rem;
+            background: var(--gradient-blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255, 107, 107, 0.5);
+        }
+
+        .mode-indicator {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--color-charcoal);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            background: var(--color-charcoal);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--color-charcoal-light);
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-electric-blue);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .color-card {
+            background: var(--color-charcoal-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .color-card:hover {
+            border-color: var(--color-electric-blue);
+            transform: translateY(-4px);
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-value {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--color-gray);
+        }
+
+        .gradient-showcase {
+            height: 200px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .typography-sample {
+            margin-bottom: 1rem;
+        }
+
+        .typography-sample h1,
+        .typography-sample h2,
+        .typography-sample h3 {
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .typography-sample p {
+            color: var(--color-soft-white);
+            line-height: 1.6;
+        }
+
+        .button-showcase {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--color-electric-blue);
+            color: var(--color-electric-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-electric-blue);
+            color: white;
+        }
+
+        .card-example {
+            background: var(--color-charcoal-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .card-example h3 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--color-electric-blue);
+            margin-bottom: 1rem;
+        }
+
+        .card-example p {
+            color: var(--color-soft-white);
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: var(--color-charcoal-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--color-gray);
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .theme-toggle-btn {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle-btn" id="themeToggle">
+        🌙 Switch to Light Mode
+    </button>
+
+    <div class="container">
+        <header>
+            <h1>1200 Agency Color Palette</h1>
+            <div class="mode-indicator" id="modeIndicator">
+                Current Mode: <strong>Dark Mode</strong>
+            </div>
+        </header>
+
+        <!-- Primary Colors -->
+        <div class="section">
+            <h2 class="section-title">Primary Brand Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-electric-blue);"></div>
+                    <div class="color-name">Neon Coral / Deep Coral</div>
+                    <div class="color-value" id="coral-value">#FF6B6B (Dark) / #FF5252 (Light)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-electric-blue-dark);"></div>
+                    <div class="color-name">Electric Purple / Rich Purple</div>
+                    <div class="color-value" id="purple-value">#A855F7 (Dark) / #9C27B0 (Light)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-accent-yellow);"></div>
+                    <div class="color-name">Cyber Yellow / Amber</div>
+                    <div class="color-value" id="yellow-value">#FCD34D (Dark) / #FFC107 (Light)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Colors -->
+        <div class="section">
+            <h2 class="section-title">Background Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-deep-charcoal);"></div>
+                    <div class="color-name">Deep Background</div>
+                    <div class="color-value" id="bg-deep">#0A0A0F (Dark) / #FDFBF7 (Light)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-charcoal);"></div>
+                    <div class="color-name">Card Background</div>
+                    <div class="color-value" id="bg-card">#1A1A24 (Dark) / #F8F6F3 (Light)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-charcoal-light);"></div>
+                    <div class="color-name">Light Background</div>
+                    <div class="color-value" id="bg-light">#2A2A34 (Dark) / #F0EDE8 (Light)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Colors -->
+        <div class="section">
+            <h2 class="section-title">Text Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-pure-white);"></div>
+                    <div class="color-name">Primary Text</div>
+                    <div class="color-value" id="text-primary">#FFFFFF (Dark) / #1A1A1A (Light)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-soft-white);"></div>
+                    <div class="color-name">Secondary Text</div>
+                    <div class="color-value" id="text-secondary">#F8F9FA (Dark) / #4A4A4A (Light)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--color-gray);"></div>
+                    <div class="color-name">Muted Text</div>
+                    <div class="color-value" id="text-muted">#E0E0E0 (Dark) / #6B6B6B (Light)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gradient -->
+        <div class="section">
+            <h2 class="section-title">Brand Gradient</h2>
+            <div class="gradient-showcase" style="background: var(--gradient-blue);">
+                1200 Agency
+            </div>
+        </div>
+
+        <!-- Typography Examples -->
+        <div class="section">
+            <h2 class="section-title">Typography in Action</h2>
+            <div class="typography-sample">
+                <h1>Heading 1 - The Agency Your Developer Friends Would Build</h1>
+                <h2>Heading 2 - Full-Stack Growth Engineering</h2>
+                <h3>Heading 3 - We Actually Know What an API Is</h3>
+                <p>Body text: Full-stack growth for companies tired of agencies that can't code their way out of a paper
+                    bag. We don't just design funnels—we engineer them. And yes, we actually know what an API is.</p>
+            </div>
+        </div>
+
+        <!-- Button Examples -->
+        <div class="section">
+            <h2 class="section-title">Button Styles</h2>
+            <div class="button-showcase">
+                <button class="btn btn-primary">Let's Build Something Cool</button>
+                <button class="btn btn-outline">See What We've Built</button>
+            </div>
+        </div>
+
+        <!-- Card Examples -->
+        <div class="section">
+            <h2 class="section-title">Card Components</h2>
+            <div class="card-example">
+                <h3>Full-Stack Web Development</h3>
+                <p>We build websites so fast your users think their WiFi upgraded. Optimized for Core Web Vitals, not
+                    just aesthetics.</p>
+            </div>
+            <div class="card-example">
+                <h3>Sales Funnels That Convert</h3>
+                <p>Engineered, not just designed. We create conversion engines that evolve and optimize themselves.</p>
+            </div>
+        </div>
+
+        <!-- Stats Example -->
+        <div class="section">
+            <h2 class="section-title">Stats & Metrics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Conversion Increase</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2.1s</div>
+                    <div class="stat-label">Page Load Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98</div>
+                    <div class="stat-label">Lighthouse Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$2.4M</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const modeIndicator = document.getElementById('modeIndicator');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            html.setAttribute('data-theme', 'light');
+            updateUI('light');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const theme = html.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateUI(newTheme);
+        });
+
+        function updateUI(theme) {
+            if (theme === 'light') {
+                themeToggle.textContent = '🌙 Switch to Dark Mode';
+                modeIndicator.innerHTML = 'Current Mode: <strong>Light Mode</strong>';
+            } else {
+                themeToggle.textContent = '☀️ Switch to Light Mode';
+                modeIndicator.innerHTML = 'Current Mode: <strong>Dark Mode</strong>';
+            }
+        }
+    </script>
+</body>
+
+</html>
