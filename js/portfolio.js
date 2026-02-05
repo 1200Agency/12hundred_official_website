@@ -145,9 +145,17 @@ function createPortfolioItem(item, category, index) {
         </div>
     `;
 
-    // Add click handler
+    // Store image data on the element
+    article.imageData = {
+        src: imagePath,
+        alt: `${item.title} - ${item.client}`,
+        title: item.title,
+        client: item.client
+    };
+
+    // Add click handler - pass the article element itself
     article.addEventListener('click', () => {
-        openLightbox(index);
+        openLightbox(article);
     });
 
     return article;
@@ -257,8 +265,16 @@ function shuffleArray(array) {
 }
 
 // Open lightbox (handled in lightbox.js)
-function openLightbox(index) {
+function openLightbox(clickedArticle) {
     if (window.Lightbox) {
-        window.Lightbox.open(index);
+        // Find the index of the clicked item among all visible portfolio items
+        const allItems = Array.from(document.querySelectorAll('.portfolio-item'));
+        const visibleItems = allItems.filter(item => item.style.display !== 'none');
+        const index = visibleItems.indexOf(clickedArticle);
+
+        if (index !== -1) {
+            window.Lightbox.open(index);
+        }
     }
 }
+

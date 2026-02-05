@@ -30,14 +30,17 @@ const Lightbox = (() => {
     // Collect all portfolio images
     function collectImages() {
         const portfolioItems = document.querySelectorAll('.portfolio-item');
-        images = Array.from(portfolioItems).map(item => {
+        // Only collect visible items
+        const visibleItems = Array.from(portfolioItems).filter(item => item.style.display !== 'none');
+
+        images = visibleItems.map(item => {
             const img = item.querySelector('.item-image');
             const title = item.querySelector('.item-title');
             const client = item.querySelector('.item-client');
 
             return {
-                src: img.src,
-                alt: img.alt,
+                src: img ? img.src : '',
+                alt: img ? img.alt : '',
                 title: title ? title.textContent : '',
                 client: client ? client.textContent : ''
             };
